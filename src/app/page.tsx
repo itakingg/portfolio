@@ -488,64 +488,64 @@ export default function Home() {
             </motion.div>
 
             {/* EDITORIAL PROFILE FRAME */}
-            <motion.div variants={fadeInUp} className="lg:col-span-5 flex justify-center pt-2 sm:pt-0">
-              <div className="relative w-full max-w-[320px] sm:max-w-sm aspect-[4/5] rounded-[28px] sm:rounded-[36px] bg-neutral-900/80 p-3 sm:p-3.5 border border-neutral-800 shadow-2xl overflow-hidden group">
-                <div className="relative w-full h-full rounded-[22px] sm:rounded-[26px] overflow-hidden grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                  <Image
-                    src="/profile.webp"
-                    alt="Adi Pramana Putra"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-60" />
-                </div>
+<motion.div variants={fadeInUp} className="lg:col-span-5 flex justify-center pt-2 sm:pt-0">
+  <div className="relative w-full max-w-[320px] sm:max-w-sm aspect-[4/5] rounded-[28px] sm:rounded-[36px] bg-neutral-900/80 p-3 sm:p-3.5 border border-neutral-800 shadow-2xl overflow-hidden group cursor-pointer select-none">
+    <div className="relative w-full h-full rounded-[22px] sm:rounded-[26px] overflow-hidden grayscale contrast-125 group-hover:grayscale-0 group-active:grayscale-0 group-hover:scale-105 group-active:scale-105 transition-all duration-700">
+      <Image
+        src="/profile.webp"
+        alt="Adi Pramana Putra"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-60" />
+    </div>
 
-                {/* OVERLAY CARD */}
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#16161A]/95 border border-neutral-800/90 backdrop-blur-md flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center sm:justify-between gap-2.5 sm:gap-0">
-                  <div>
-                    <h3 className="font-bold text-xs sm:text-sm text-neutral-200 whitespace-nowrap">Adi Pramana Putra</h3>
-                    <p className="text-[10px] sm:text-xs text-neutral-400 font-light">Fullstack Engineer</p>
-                  </div>
-                  <div className="flex gap-2 items-center justify-center sm:justify-end w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-800/60">
-                    <a href="https://github.com/itakingg" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
-                      <GithubIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </a>
+    {/* OVERLAY CARD */}
+    <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#16161A]/95 border border-neutral-800/90 backdrop-blur-md flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center sm:justify-between gap-2.5 sm:gap-0">
+      <div>
+        <h3 className="font-bold text-xs sm:text-sm text-neutral-200 whitespace-nowrap">Adi Pramana Putra</h3>
+        <p className="text-[10px] sm:text-xs text-neutral-400 font-light">Fullstack Engineer</p>
+      </div>
+      <div className="flex gap-2 items-center justify-center sm:justify-end w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-800/60">
+        <a href="https://github.com/itakingg" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
+          <GithubIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+        </a>
 
-                    {/* DISCORD COPY BUTTON (PROFILE CARD) */}
-                    <div className="relative">
-                      <button 
-                        onClick={handleCopyDiscord} 
-                        aria-label="Salin Username Discord" 
-                        title="Salin username Discord: @muztkwatz"
-                        className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors cursor-pointer flex items-center justify-center"
-                      >
-                        {copiedDiscord ? <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" /> : <DiscordIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
-                      </button>
-                      <AnimatePresence>
-                        {copiedDiscord && (
-                          <motion.span 
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            className="absolute -top-9 left-1/2 -translate-x-1/2 bg-neutral-900 text-emerald-400 text-[10px] py-1 px-2 rounded-md border border-neutral-800 whitespace-nowrap shadow-lg pointer-events-none z-50 font-mono"
-                          >
-                            @muztkwatz tersalin!
-                          </motion.span>
-                        )}
-                      </AnimatePresence>
-                    </div>
+        {/* DISCORD COPY BUTTON (PROFILE CARD) */}
+        <div className="relative">
+          <button 
+            onClick={handleCopyDiscord} 
+            aria-label="Salin Username Discord" 
+            title="Salin username Discord: @muztkwatz"
+            className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors cursor-pointer flex items-center justify-center"
+          >
+            {copiedDiscord ? <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" /> : <DiscordIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+          </button>
+          <AnimatePresence>
+            {copiedDiscord && (
+              <motion.span 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="absolute -top-9 left-1/2 -translate-x-1/2 bg-neutral-900 text-emerald-400 text-[10px] py-1 px-2 rounded-md border border-neutral-800 whitespace-nowrap shadow-lg pointer-events-none z-50 font-mono"
+              >
+                @muztkwatz tersalin!
+              </motion.span>
+            )}
+          </AnimatePresence>
+        </div>
 
-                    <a href="https://www.facebook.com/adipramana34" target="_blank" rel="noreferrer" aria-label="Facebook" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
-                      <FacebookIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </a>
-                    <a href="https://x.com/urlovablealienn" target="_blank" rel="noreferrer" aria-label="X" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
-                      <XIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+        <a href="https://www.facebook.com/adipramana34" target="_blank" rel="noreferrer" aria-label="Facebook" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
+          <FacebookIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+        </a>
+        <a href="https://x.com/urlovablealienn" target="_blank" rel="noreferrer" aria-label="X" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
+          <XIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+        </a>
+      </div>
+    </div>
+  </div>
+</motion.div>
           </div>
         </motion.section>
 
