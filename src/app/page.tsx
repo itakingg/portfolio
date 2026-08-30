@@ -492,7 +492,7 @@ export default function Home() {
   <div className="relative w-full max-w-[320px] sm:max-w-sm aspect-[4/5] rounded-[28px] sm:rounded-[36px] bg-neutral-900/80 p-3 sm:p-3.5 border border-neutral-800 shadow-2xl overflow-hidden group cursor-pointer select-none">
     <div className="relative w-full h-full rounded-[22px] sm:rounded-[26px] overflow-hidden grayscale contrast-125 group-hover:grayscale-0 group-active:grayscale-0 group-hover:scale-105 group-active:scale-105 transition-all duration-700">
       <Image
-        src="/jamil.jpg"
+        src="/profile.webp"
         alt="Adi Pramana Putra"
         fill
         className="object-cover"
