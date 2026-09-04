@@ -505,7 +505,7 @@ export default function Home() {
     <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#16161A]/95 border border-neutral-800/90 backdrop-blur-md flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center sm:justify-between gap-2.5 sm:gap-0">
       <div>
         <h3 className="font-bold text-xs sm:text-sm text-neutral-200 whitespace-nowrap">Adi Pramana Putra</h3>
-        <p className="text-[10px] sm:text-xs text-neutral-400 font-light">Fullstack Engineer</p>
+        <p className="text-[10px] sm:text-xs text-neutral-400 font-light">Fullstack Developer</p>
       </div>
       <div className="flex gap-2 items-center justify-center sm:justify-end w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-neutral-800/60">
         <a href="https://github.com/itakingg" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-neutral-800 text-neutral-300 hover:text-white transition-colors">
